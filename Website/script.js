@@ -21,18 +21,21 @@ function filterFunction() {
 } 
 
 $("#btnPrint").click( function () {
-    var divContents = $("#dvContainer").html();
-    var printWindow = window.open('', '', 'height=400,width=800');
+	//var divContents = document.getElementById("#dvContainer").innerHTML;
+   var divContents = $("#dvContainer").html();
+ /*   var printWindow = window.open('', '', 'height=400,width=800');
     printWindow.document.write('<html><head><title>DIV Contents</title>');
     printWindow.document.write('</head><body >');
     printWindow.document.write(divContents);
     printWindow.document.write('</body></html>');
     printWindow.document.close();
-    printWindow.print();
-});
-
-// Default export is a4 paper, portrait, using milimeters for units
+    printWindow.print();*/
+	// Default export is a4 paper, portrait, using milimeters for units
+	
 var doc = new jsPDF()
 
-doc.text('Hello world!', 10, 10)
+doc.text(divContents, 10, 10)
 doc.save('a4.pdf')
+
+});
+
