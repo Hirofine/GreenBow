@@ -48,7 +48,7 @@
 					<h2>Do you want to know the Index of Fragility in your area?</h2>
 					<p> You just need your Postal Code, if you do not know it you can find it by <a href="https://www.code-postal.com/" target="popup">clicking here.</a></p>
 					<form method="post">
-						Enter your Postal Code here: <input type="number" name="area_name"><br>
+						Enter your Postal Code here: <input type="number" name="area_name" label="pc"><br>
 						<button type="submit" name="submit">Submit</button>
 					</form>
 					<!-- PHP code handling the formulaire and looking into the preprocessed database with the results -->
