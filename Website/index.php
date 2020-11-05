@@ -133,7 +133,8 @@
 		                }
 		            }
 		            ?>
-		            <p align = "justify"> <b>Reminder</b>, you must corroborate those values with local and on the fields enquery. <br>
+		            <p align = "justify"> <b>Reminder:</b> <br>
+		            	You must corroborate those values with local and on the fields enquery. <br>
 		            	Moreover and most importantly, those values aren't exact. They are calculated out of databases that might not be up to date, or totally incomplete for different reasons such as absence of enquery in those locations, information not sent by municipalities or privacy reasons.<br>
 		            	Other statistics should be taken into account but aren't available at this level; for example the rate of illetrism or the frequency of internet usage that can't be known by municipalities.<br>
 		            	In addition, comparison between small communities, especially those situated in province should be avoided since their population isn't big enough and therefore some services aren't available.<br>
