@@ -45,8 +45,8 @@
 				</section>
 				<section id="secondary_section">
 					<h2>Section 2</h2>
-					<form action="welcome.php" method="post">
-					Postal Code: <input type="text" name="postal_code"><br>
+					<form method="post">
+					Postal Code: <input type="text" name="area_name"><br>
 					<input type="submit">
 					</form>
 
@@ -62,7 +62,8 @@
 		if(isset($_POST['submit']))
 		{
 
-		    $area_name = $_POST['postal_code'];
+		    $area_name = $_POST['area_name'];
+		    //echo "$area_name"
 		    //$area_name = $_POST['area_name'];
 		    $sql= $conn-> prepare("Insert into tblarea (area_name)
 		    values (:area_name)");
