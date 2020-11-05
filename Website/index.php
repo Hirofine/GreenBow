@@ -18,11 +18,21 @@
 				</header>
 				<section id="main_section">
 					<h2>Section 1</h2>
-					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+					<p>The digital fragility index is a tool made by the SGAR Occitanie with the ANSA and Mednum during the IncubO.\n
+					It's goal is to be used by the representative to help them to take decision about the digital inclusion on there territory.
+					<p>
 
-					<p>Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.</p>
+					<p>The digital fragility represent many things:\n
+					- There's more and more procedures that must be made online nowaday and less people to interact with\n
+					- Some people (in particular our elders, but not only) have troubles with new technologies and need some help using computers.\n
+					- Some people can't afford for this technologies and can't make the procedures as they would.\n
+					- Some people, due to the fact a website is a robot and can't interact as a human, are not aware of the procedure they have to or can do.\n
+					- There are location in those territory that are not wall suited with good bandwidth making the using of website painful or impossible\n
+					</p>
 
-					<p>In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,</p>
+					<p>This tool compile all these things with some index, so the representatives can use it to help taking some decisions and spend public money the wiser\n
+					This index show the probability for a given zone, that a significative part of the population is in situation of digital exclusion, this mean they are not able to use it properly.\n
+					This can be due to many different reasons. Those reason can be evaluated thanks to the 4 other index we are sharing.</p>
 				</section>
 				<section id="secondary_section">
 					<h2>Section 2</h2>
