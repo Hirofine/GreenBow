@@ -18,26 +18,29 @@
 				</header>
 				<section id="main_section">
 					<h2>What is the index of Fragility? and What does it mean?</h2>
-					<p>The digital fragility index is a tool made by the SGAR Occitanie with the ANSA and Mednum during the IncubO.\n
+					<p>The digital fragility index is a tool made by the SGAR Occitanie with the ANSA and Mednum during the IncubO.<br>
 					It's goal is to be used by the representative to help them to take decision about the digital inclusion on there territory.
 					<p>
 
-					<p>The digital fragility represent many things:\n
-					- There's more and more procedures that must be made online nowaday and less people to interact with\n
-					- Some people (in particular our elders, but not only) have troubles with new technologies and need some help using computers.\n
-					- Some people can't afford for this technologies and can't make the procedures as they would.\n
-					- Some people, due to the fact a website is a robot and can't interact as a human, are not aware of the procedure they have to or can do.\n
-					- There are location in those territory that are not wall suited with good bandwidth making the using of website painful or impossible\n
+					<p>The digital fragility represent many things:<br>
+					- There's more and more procedures that must be made online nowaday and less people to interact with<br>
+					- Some people (in particular our elders, but not only) have troubles with new technologies and need some help using computers.<br>
+					- Some people can't afford for this technologies and can't make the procedures as they would.<br>
+					- Some people, due to the fact a website is a robot and can't interact as a human, are not aware of the procedure they have to or can do.<br>
+					- There are location in those territory that are not wall suited with good bandwidth making the using of website painful or impossible<br>
 					</p>
 
-					<p>This tool compile all these things with some index, so the representatives can use it to help taking some decisions and spend public money the wiser\n
-					This index show the probability for a given zone, that a significative part of the population is in situation of digital exclusion, this mean they are not able to use it properly.\n
-					This can be due to many different reasons. Those reason can be evaluated thanks to the 4 other index we are sharing.\n
-					- Access to digital interfaces : Identify poorly deserved territories by network, or where populations would have financial troubles to access\n
-					- Access to the information : Identify territories where people would have issue accessing the information or troubles understanding it\n
-					- Numerical competences: Identify territories where people have issues using new technologies\n
-					- Paperwork competences: Identify territories where people have issues with paperwork (for example, young people unexperienced, or non native speaker)\n
+					<p>This tool compile all these things with some index, so the representatives can use it to help taking some decisions and spend public money the wiser<br>
+					This index show the probability for a given zone, that a significative part of the population is in situation of digital exclusion, this mean they are not able to use it properly.<br>
+					This can be due to many different reasons. Those reason can be evaluated thanks to the 4 other index we are sharing.<br>
+					- Access to digital interfaces : Identify poorly deserved territories by network, or where populations would have financial troubles to access<br>
+					- Access to the information : Identify territories where people would have issue accessing the information or troubles understanding it<br>
+					- Numerical competences: Identify territories where people have issues using new technologies<br>
+					- Paperwork competences: Identify territories where people have issues with paperwork (for example, young people unexperienced, or non native speaker)<br>
 
+					</p>
+					<p>
+					
 					</p>
 				</section>
 				<section id="secondary_section">
@@ -82,12 +85,18 @@
 		    $data = mysqli_fetch_array($records);
 		        
 
-		        echo "<table>
-		    <tr>
-		    <th>Commune</th>
-		    </tr>
-		    <tr><th>" . $data['COM'] . "</th>
-		    </tr></table>";
+		        echo 
+				"<table>
+						<tr>
+							<th>"The digital fragility index for $data['name of comune'] ($data['COM']) is  $data['global score']."</th>
+						</tr>
+						<tr>
+							<th>"The one for $data['department name'] ($data['departement number']) is $data['dpt score']."</th>
+						</tr>
+						<tr>
+							<th>" The one for $data['region name'] is $data['region score']."</th>
+						</tr>
+						</table>";
 		}
 
 		        
