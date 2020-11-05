@@ -6,8 +6,6 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Index of Fragility</title>
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-		<script src="https://kit.fontawesome.com/13e80550c9.js" crossorigin="anonymous"></script>
 		<link rel="stylesheet" type="text/css" href="styles.css">
 	</head>
 	<body>
@@ -45,10 +43,11 @@
 				</section>
 				<section id="secondary_section">
 					<h2>Section 2</h2>
-					<form method="post">
-					Postal Code: <input type="text" name="area_name"><br>
+					<form action="index.php" method="post">
+					Postal Code: <input type="number" name="area_name"><br>
 					<input type="submit">
 					</form>
+
 
 		<?php
 		
@@ -63,7 +62,6 @@
 		{
 
 		    $area_name = $_POST['area_name'];
-		    //echo "$area_name"
 		    //$area_name = $_POST['area_name'];
 		    $sql= $conn-> prepare("Insert into tblarea (area_name)
 		    values (:area_name)");
@@ -72,19 +70,13 @@
 			file_put_contents('filename.txt', $area_name); 
 		    $conn->commit();
 		    $db = mysqli_connect("localhost","fatima","admin","trial");
-		    $records = mysqli_query($db, "SELECT COM From data_13k where COM=$area_name");  // Use select query here
+		    $records = mysqli_query($db, "SELECT COM,name_commune,global_score From data_13k where COM=$area_name");  // Use select query here
 		    $data = mysqli_fetch_array($records);
 		        
 
 		        echo "<table>
 						<tr>
 							<th>The digital fragility index for " . $data['name_commune'] . " (" . $data['COM'] . ") is  " . $data['global_score'] . ".</th>
-						</tr>
-						<tr>
-							<th>The one for " . $data['dept_name'] . " (" . $data['dept_number'] . ") is " . $data['dpt score'] . ".</th>
-						</tr>
-						<tr>
-							<th>The one for " . $data['region_name'] . " is " . $data['region_score'] . ".</th>
 						</tr>
 						</table>";
 		}
