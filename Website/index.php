@@ -132,6 +132,11 @@
 		                }
 		            }
 		            ?>
+					<p align = "center"> Reminder, you must corroborate those values with local and on the fields enquery. <br>
+						Moreover and most importantly, those values aren't exact. They are calculated out of databases that might not be up to date, or totally complete for different reason such has, there was no enquery in those location yet or municipalities havn't sent, for some privacy reason, their values.<br>
+						Other statistics should be taken into account but aren't available at this level, for example the rate of illetrism or the frequency of internet usage that jst can't be known by municipalities.<br>
+						In addition, comparison between small comunalities, especially those situated in province, should be avoided, their population isn't big enough so some services aren't available.<br>
+					</p>
 		            <button onclick="javascript:demoFromHTML();">PDF of Results</button>
 		        </form>
 		    </section>
