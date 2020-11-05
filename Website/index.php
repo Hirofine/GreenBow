@@ -115,18 +115,10 @@
 		    </tr>
 			</table>
 			<h3> Conclusion </h3>
-			<p>
-	<table>
-		<tr>
-			<th>The digital fragility index for " . $data['name_commune'] . " (" . $data['COM'] . ") is  " . $data['global_score'] . ".</th>
-		</tr>
-		<tr>
-			<th>The one for " . $data['dept_name'] . " (" . $data['dept_number'] . ") is " . $data['dept_score'] . ".</th>
-		</tr>
-		<tr>
-			<th>The one for " . $data['region_name'] . " is " . $data['region_score'] . ".</th>
-		</tr>
-	</table>";
+			<p>The digital fragility index for " . $data['name_commune'] . " (" . $data['COM'] . ") is  " . $data['global_score'] . ".</p>
+		<p>The one for " . $data['dept_name'] . " (" . $data['dept_number'] . ") is " . $data['dept_score'] . ".</p>
+		<p>The one for " . $data['region_name'] . " is " . $data['region_score'] . ".<p>";
+		
 	if($data['global_score'] < 0.5 * $data['dept_score']){	
 		echo '<p> Your municipality is well suited, and your population tend to have quite a good access to the information compared to your departement.</p>';
 	}else{ 
