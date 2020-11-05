@@ -63,6 +63,7 @@
 
 		    $area_name = $_POST['area_name'];
 		    //$area_name = $_POST['area_name'];
+		    echo "$area_name"; 
 		    $sql= $conn-> prepare("Insert into tblarea (area_name)
 		    values (:area_name)");
 		    $conn->beginTransaction();
