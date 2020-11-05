@@ -87,13 +87,13 @@
 
 		        echo "<table>
 						<tr>
-							<th>The digital fragility index for " . $data['name of commune'] . " (" . $data['COM'] . ") is  " . $data['global score'] . ".</th>
+							<th>The digital fragility index for " . $data['name_of_commune'] . " (" . $data['COM'] . ") is  " . $data['global score'] . ".</th>
 						</tr>
 						<tr>
-							<th>The one for " ; $data['dept name'] . " (" . $data['dept number'] ; ") is " ; $data['dpt score'] . ".</th>
+							<th>The one for " ; $data['dept_name'] . " (" . $data['dept_number'] ; ") is " ; $data['dpt_score'] . ".</th>
 						</tr>
 						<tr>
-							<th>The one for " . $data['region name'] . " is " . $data['region score'] . ".</th>
+							<th>The one for " . $data['region_name'] . " is " . $data['region_score'] . ".</th>
 						</tr>
 						</table>";
 		}

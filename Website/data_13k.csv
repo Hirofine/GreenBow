@@ -1,4 +1,4 @@
-COM,name of commune,global score,dpt score,region score,dept name,dept number,region name,Acces aux interfaces numériques,Acces a l’information,Compétences Administratives,Competences numériques/Scolaires
+COM,name_of_commune,global_score,dpt_score,region_score,dept_name,dept_number,region_name,Acces_aux_interfaces_numeriques,Acces_a_information,Competences_Administratives,Competences_numeriques_Scolaires
 1001,L'Abergement-Clémenciat,"78,533897038","86,8191482864969","90,0466298766844",AIN,1,AUVERGNE RHONE ALPES,"104,694319716","53,943524938","75,070429652","91,775791492"
 1002,L'Abergement-de-Varey,"75,671968322","86,8191482864969","90,0466298766844",AIN,1,AUVERGNE RHONE ALPES,"107,78095268","63,265985091","65,045289567","77,33679875"
 1004,Ambérieu-en-Bugey,"108,4488360405","86,8191482864969","90,0466298766844",AIN,1,AUVERGNE RHONE ALPES,"92,953182403","120,52700150675","122,224285183","97,2307728225"
