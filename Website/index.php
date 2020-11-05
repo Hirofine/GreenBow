@@ -46,9 +46,9 @@
 			<!-- Section where the user can use the tool -->
 			<section id="secondary_section" align = "justify">
 				<h2>Do you want to know the Index of Fragility in your area?</h2>
-				<p> You just need your Postal Code, if you do not know it you can find it by <a href="https://www.code-postal.com/" target="popup">clicking here.</a></p>
+				<p> You just need your Postal Code, if you do not know it you can find it on <a href="https://www.code-postal.com/" target="popup">code-postal.</a></p>
 				<form method="post"  label="pc2">
-					<label>Enter your Postal Code here</label>
+					<label>Enter your Postal Code here: </label>
 					<input type="number" name="area_name" label="pc"><br>
 					<button type="submit" name="submit">Submit</button>
 				</form>
@@ -65,7 +65,7 @@
 					file_put_contents('filename.txt', $area_name); 
 					$conn->commit();
 					$db = mysqli_connect("localhost","fatima","admin","trial");
-		                $records = mysqli_query($db, "SELECT COM,name_commune,global_score,dpt_score,region_score,index1,index2,index3,index4,dept_name,region_name,dept_number From data_13k where COM=$area_name");  // Use select query here
+		                $records = mysqli_query($db, "SELECT COM,name_commune,global_score,dpt_score,region_score,index1,index2,index3,index4,dept_name,region_name From data_13k where COM=$area_name");  // Use select query here
 		                $data = mysqli_fetch_array($records);
 		                if ($data == Null){
 		                	echo "Your Post Code was not found, please enter a valid one.";
@@ -102,7 +102,7 @@
 		                	<p> These results represent all variables of the commune researched, it shows that:</p>
 		                	<ul>
 		                	<li>The digital fragility index of " . $data['name_commune'] . " " . $data['COM'] . " is  " . $data['global_score'] . ". </li>
-		                	<li>The score of its department called " . $data['dept_name'] . " Number " . $data['dept_number'] . "  is " . $data['dpt_score'] . ". </li>
+		                	<li>The score of its department called " . $data['dept_name']  . "  is " . $data['dpt_score'] . ". </li>
 		                	<li>And for its region called " . $data['region_name'] . " is " . $data['region_score'] . ". </li> </ul>
 		                	</div>";
 		                	if($data['global_score'] < 0.5 * $data['dpt_score']){	
