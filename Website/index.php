@@ -85,13 +85,14 @@
 			file_put_contents('filename.txt', $area_name); 
 		    $conn->commit();
 		    $db = mysqli_connect("localhost","fatima","admin","trial");
-		    $records = mysqli_query($db, "SELECT COM,name_commune,global_score,dpt_score,region_score,index1,index2,index3,index4 From data_13k where COM=$area_name");  // Use select query here
+		     $records = mysqli_query($db, "SELECT COM,name_commune,global_score,dpt_score,region_score,index1,index2,index3,index4,dept_name,region_name,dept_number From data_13k where COM=$area_name");  // Use select query here
 		    $data = mysqli_fetch_array($records);
+		        
 
 		        echo "
 				<div id='customers'>
 				
-				<table>
+				<table  >
 		    <tr>
 				<th > <p  id='bypassme'>Postal code</p></th>
 				<th ><p >Commune name</p></th>
@@ -115,37 +116,25 @@
 				<th>" . $data['index4'] . "</th>
 		    </tr>
 			</table>
+			
 			<h3> Conclusion </h3>
-<<<<<<< Updated upstream
-			<p>The digital fragility index for " . $data['name_commune'] . " (" . $data['COM'] . ") is  " . $data['global_score'] . ".</p>
-		<p>The one for " . $data['dept_name'] . " (" . $data['dept_number'] . ") is " . $data['dept_score'] . ".</p>
-		<p>The one for " . $data['region_name'] . " is " . $data['region_score'] . ".<p>";
+			<p> These results represent all variables of the commune researched, it shows that:</p>
+	<ul>
+	<li>The digital fragility index of " . $data['name_commune'] . " " . $data['COM'] . " is  " . $data['global_score'] . ". </li>
+		<li>The score of its department called " . $data['dept_name'] . " Number " . $data['dept_number'] . "  is " . $data['dpt_score'] . ". </li>
+		<li>And for its region called " . $data['region_name'] . " is " . $data['region_score'] . ". </li> </ul>
+		</div>";
 		
-=======
-			<p>
-			</div>
-	<table>
-		<tr>
-			<th>The digital fragility index for " . $data['name_commune'] . " (" . $data['COM'] . ") is  " . $data['global_score'] . ".</th>
-		</tr>
-		<tr>
-			<th>The one for " . $data['dept_name'] . " (" . $data['dept_number'] . ") is " . $data['dept_score'] . ".</th>
-		</tr>
-		<tr>
-			<th>The one for " . $data['region_name'] . " is " . $data['region_score'] . ".</th>
-		</tr>
-	</table>";
->>>>>>> Stashed changes
-	if($data['global_score'] < 0.5 * $data['dept_score']){	
+	if($data['global_score'] < 0.5 * $data['dpt_score']){	
 		echo '<p> Your municipality is well suited, and your population tend to have quite a good access to the information compared to your departement.</p>';
 	}else{ 
-		if( $data['global_score'] < 0.9 * $data['dept_score']){
+		if( $data['global_score'] < 0.9 * $data['dpt_score']){
 			echo '<p>Compared to your department, your municipality is quite good, but there is still room for improvment.</p>';
 		}else{ 
-			if($data['global_score'] < 1.1 * $data['dept_score']){
+			if($data['global_score'] < 1.1 * $data['dpt_score']){
 				echo '<p>Your municipality have about the same result s your department, maybe you should do some investment to be one of the leader of the digital transition in your department and get your citizens a better life </p>';
 			}else{  
-				if( $data['global_score'] < 1.5 * $data['dept_score']){
+				if( $data['global_score'] < 1.5 * $data['dpt_score']){
 					echo '<p>Your municipality seems to be late for the digital transition in your department, you should take action so your citizens won\'t be in trouble in the near futur </p>';
 				}else{
 					echo '<p>Your municipality is late in the digital transition compare to your department, you must take decision otherwise your citizens might become unable to adapt and overwhelmed by this transition soon.</p>';
@@ -154,20 +143,18 @@
 		}
 	}
 	
-	if($data['dept_score'] < 0.9 * $data['region_score']){
+	if($data['dpt_score'] < 0.9 * $data['region_score']){
 		echo '<p>Your departement seems to be one of the leader of your region when it is about the digital transition, this is good.</p>';
 	}else{
-		if($data['dept_score'] < 1.1 * $data['region_score']){
+		if($data['dpt_score'] < 1.1 * $data['region_score']){
 			echo '<p>Your departement is in the mean of your region in the digital transition, try to improve the decisions to get your municipalityand departement to be one of the leader of the transtion </p>';
 		}else{
 			echo '<p>Your departement seems to be in late compare to your region in the digital transition, try to work at higher level than the municipality one to get a global line of conducts to pursue the transition</p>';
 		}
 	}
 		
-
-		        
-        
- ?> 
+		}
+		?>
 
 					    
 					    <button onclick="javascript:demoFromHTML();">PDF of Results</button>
