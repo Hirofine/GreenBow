@@ -17,7 +17,7 @@
 					<small>Design4Green</small>
 				</header>
 				<section id="main_section">
-					<h2>Section 1</h2>
+					<h2>What is the index of Fragility? and What does it mean?</h2>
 					<p>The digital fragility index is a tool made by the SGAR Occitanie with the ANSA and Mednum during the IncubO.\n
 					It's goal is to be used by the representative to help them to take decision about the digital inclusion on there territory.
 					<p>
