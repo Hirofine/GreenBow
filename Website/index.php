@@ -45,22 +45,6 @@
 						</form>
 				        <form id="form2">
 					    <div id="dvContainer">
-					        This content needs to be printed.
-					    </div>
-					    <input type="button" value="Print Div Contents" id="btnPrint" />
-					    </form>
-				</section>
-				
-
-				<footer>
-					<p align="center">Copyright (c) 2020</p>
-				</footer>
-		</div>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> 
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.1.1/jspdf.umd.min.js"></script>
-		<script src="jspdf.debug.js"></script>
-		<script src="script.js"></script>
-
 		<?php
 		// Turn off all error reporting
 		//error_reporting(0);
@@ -93,6 +77,21 @@
 		        
         
  ?> 
+
+					    </div>
+					    <input type="button" value="Print Div Contents" id="btnPrint" />
+					    </form>
+				</section>
+				
+
+				<footer>
+					<p align="center">Copyright (c) 2020</p>
+				</footer>
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> 
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.1.1/jspdf.umd.min.js"></script>
+		<script src="jspdf.debug.js"></script>
+		<script src="script.js"></script>
 
 		
 	</body>
