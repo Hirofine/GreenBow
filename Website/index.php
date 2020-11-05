@@ -80,10 +80,10 @@
 		                <th >Global score</th>
 		                <th>dept score</th>
 		                <th>region score</th>
-		                <th>index1</th>
-		                <th>index2</th>
-		                <th>index3</th>
-		                <th>index4</th>
+		                <th>Access to Digital Interfaces</th>
+		                <th>Access to the information</th>
+		                <th>Numerical competences</th>
+		                <th>Paperwork competences</th>
 		                </tr>
 		                <tr>
 		                <th>" . $data['COM'] . "</th>
