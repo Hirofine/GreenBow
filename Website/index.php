@@ -145,7 +145,7 @@
 		    </section>
 		    <!-- Footer of the website -->
 		    <footer>
-		    	<p align="center">Copyright (c) 2020</p>
+		    	<p align="center">Copyright (c) 2020 - Team 19</p>
 		    </footer>
 		</div>
 		<!-- Javascript Libraries  -->
