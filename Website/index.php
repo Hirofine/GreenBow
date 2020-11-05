@@ -18,12 +18,12 @@
 <body>
 	<div id="content">
 		<header>
-			<h1>Index of Fragility</h1>
+			<h1>Index of Digital Fragility</h1>
 			<small>Design4Green</small>
 		</header>
 		<!-- Introduction to the index of fragility and the tool -->
 		<section id="main_section" align = "justify">
-			<h2>What is the Index of Fragility? and What does it mean?</h2>
+			<h2>What is the Index of Digital Fragility? and What does it mean?</h2>
 			<p>The digital fragility index is a tool made by the SGAR Occitanie with the ANSA and Mednum during the IncubO.<br>
 				Its goal is to be used by the representative to help them to take decision about the digital inclusion on there territory.
 				<h3>Why is the index of fragility important?</h3>
@@ -36,7 +36,7 @@
 				</p>
 				<p>This tool compile all these things with some index, so the representatives can use it to help taking some decisions and spend public money the wiser<br>
 					This index show the probability for a given zone, that a significative part of the population is in situation of digital exclusion, this mean they are not able to use it properly.<br>
-					This can be due to many different reasons. Those reason can be evaluated thanks to the 4 other index we are sharing.<br>
+					This can be due to many different reasons.<br> Those reason can be evaluated thanks to the 4 other index we are sharing.<br>
 					- Access to digital interfaces : Identify poorly deserved territories by network, or where populations would have financial troubles to access<br>
 					- Access to the information : Identify territories where people would have issue accessing the information or troubles understanding it<br>
 					- Numerical competences: Identify territories where people have issues using new technologies<br>
@@ -47,8 +47,9 @@
 			<section id="secondary_section" align = "justify">
 				<h2>Do you want to know the Index of Fragility in your area?</h2>
 				<p> You just need your Postal Code, if you do not know it you can find it by <a href="https://www.code-postal.com/" target="popup">clicking here.</a></p>
-				<form method="post">
-					Enter your Postal Code here: <input type="number" name="area_name" label="pc"><br>
+				<form method="post"  label="pc2">
+					<label>Enter your Postal Code here</label>
+					<input type="number" name="area_name" label="pc"><br>
 					<button type="submit" name="submit">Submit</button>
 				</form>
 				<!-- PHP code handling the formulaire and looking into the preprocessed database with the results -->
@@ -133,7 +134,7 @@
 		                }
 		            }
 		            ?>
-		            <p align = "justify"> <b>Reminder:</b> <br>
+		            <p align = "justify"> <h2>Reminder:</h2> 
 		            	You must corroborate those values with local and on the fields enquery. <br>
 		            	Moreover and most importantly, those values aren't exact. They are calculated out of databases that might not be up to date, or totally incomplete for different reasons such as absence of enquery in those locations, information not sent by municipalities or privacy reasons.<br>
 		            	Other statistics should be taken into account but aren't available at this level; for example the rate of illetrism or the frequency of internet usage that can't be known by municipalities.<br>
@@ -145,7 +146,7 @@
 		    </section>
 		    <!-- Footer of the website -->
 		    <footer>
-		    	<p align="center">Copyright (c) 2020 - Team 19</p>
+		    	<p align="center">Copyright (c) 2020   -   Team 19</p>
 		    </footer>
 		</div>
 		<!-- Javascript Libraries  -->
