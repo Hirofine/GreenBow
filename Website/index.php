@@ -79,7 +79,7 @@
 		                	<th > <p  id='bypassme'>Postal code</p></th>
 		                	<th ><p >Commune name</p></th>
 		                	<th >Global score</th>
-		                	<th>Departmentrtment score</th>
+		                	<th>Department score</th>
 		                	<th>Region score</th>
 		                	<th>Access to Digital Interfaces</th>
 		                	<th>Access to the information</th>
