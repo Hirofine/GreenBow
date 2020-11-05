@@ -73,38 +73,77 @@
 		    $db = mysqli_connect("localhost","fatima","admin","trial");
 		    $records = mysqli_query($db, "SELECT COM,name_commune,global_score,dpt_score,region_score,index1,index2,index3,index4 From data_13k where COM=$area_name");  // Use select query here
 		    $data = mysqli_fetch_array($records);
-		        echo "
-				<div id='customers'>
-				
-				<table  >
-		    <tr>
-				<th > <p  id='bypassme'>Postal code</p></th>
-				<th ><p >Commune name</p></th>
-				<th >Global score</th>
-				<th>dept score</th>
-				<th>region score</th>
-				<th>index1</th>
-				<th>index2</th>
-				<th>index3</th>
-				<th>index4</th>
-		    </tr>
-		    <tr>
-				<th>" . $data['COM'] . "</th>
-				<th>" . $data['name_commune'] . "</th>
-				<th>" . $data['global_score'] . "</th>
-				<th>" . $data['dpt_score'] . "</th>
-				<th>" . $data['region_score'] . "</th>
-				<th>" . $data['index1'] . "</th>
-				<th>" . $data['index2'] . "</th>
-				<th>" . $data['index3'] . "</th>
-				<th>" . $data['index4'] . "</th>
-		    </tr>
-			</table>
-			
-			<h3> Conclusion </h3>
-			<p> These results represent all variables of the commune researched, it shows that...</p>
-			</div>
-			";
+		        echo 
+	"<table>
+		<tr>
+			<th>The digital fragility index for " . $data['name_commune'] . " (" . $data['COM'] . ") is  " . $data['global_score'] . ".</th>
+		</tr>
+		<tr>
+			<th>The one for " . $data['dept_name'] . " (" . $data['dept_number'] . ") is " . $data['dept_score'] . ".</th>
+		</tr>
+		<tr>
+			<th>The one for " . $data['region_name'] . " is " . $data['region_score'] . ".</th>
+		</tr>
+	</table>";
+	if($data['global_score'] < 0.5 * $data['dept_score']){	
+		echo '<table>
+			<tr> 
+				<th> Your municipality is well suited, and your population tend to have quite a good access to the information compared to your departement.</th>
+			</tr>
+			</table>';
+	}else{ 
+		if( $data['global_score'] < 0.9 * $data['dept_score']){
+			echo '<table>
+				<tr> 
+					<th>Compared to your department, your municipality is quite good, but there is still room for improvment.  </th>
+				</tr>
+				</table>';
+		}else{ 
+			if($data['global_score'] < 1.1 * $data['dept_score']){
+				echo '<table>
+					<tr> 
+						<th>Your municipality have about the same result s your department, maybe you should do some investment to be one of the leader of the digital transition in your department and get your citizens a better life  </th>
+					</tr>
+				</table>';
+			}else{  
+				if( $data['global_score'] < 1.5 * $data['dept_score']){
+					echo '<table>
+						<tr> 
+							<th>Your municipality seems to be late for the digital transition in your department, you should take action so your citizens won\'t be in trouble in the near futur </th>
+						</tr>
+					</table>';
+				}else{
+					echo '<table>
+						<tr> 
+							<th>Your municipality is late in the digital transition compare to your department, you must take decision otherwise your citizens might become unable to adapt and overwhelmed by this transition soon. </th>
+						</tr>
+					</table>';
+				}
+			}
+		}
+	}
+	
+	if($data['dept_score'] < 0.9 * $data['region_score']){
+		echo '<table>
+					<tr> 
+						<th>Your departement seems to be one of the leader of your region when it is about the digital transition, this is good. </th>
+					</tr>
+				</table>';
+	}else{
+		if($data['dept_score'] < 1.1 * $data['region_score']){
+			echo '<table>
+						<tr> 
+							<th>Your departement is in the mean of your region in the digital transition, try to improve the decisions to get your municipalityand departement to be one of the leader of the transtion </th>
+						</tr>
+					</table>';
+		}else{
+			echo '<table>
+					<tr> 
+						<th>Your departement seems to be in late compare to your region in the digital transition, try to work at higher level than the municipality one to get a global line of conducts to pursue the transition </th>
+					</tr>
+				</table>';
+		}
+	}
 		}
 
 		        
