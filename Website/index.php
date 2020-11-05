@@ -1,5 +1,7 @@
+<!-- Desgin4Green Hackaton, Index of Fragility Website Tool -->
 <html>
 <head>
+	<!-- Layout of the website, the colors are specified in the styles.css file -->
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,28 +12,23 @@
 			position : center;
 			border: 1px solid ;
 		}
-		tr {
-		}
-		table
-		{
-			border-collapse: collapse;
-		}
-
 	</style>
 </head>
+<!-- Body of the website -->
 <body>
 	<div id="content">
 		<header>
 			<h1>Index of Fragility</h1>
 			<small>Design4Green</small>
 		</header>
-		<section id="main_section">
-			<h2>What is the index of Fragility? and What does it mean?</h2>
+		<!-- Introduction to the index of fragility and the tool -->
+		<section id="main_section" align = "justify">
+			<h2>What is the Index of Fragility? and What does it mean?</h2>
 			<p>The digital fragility index is a tool made by the SGAR Occitanie with the ANSA and Mednum during the IncubO.<br>
-				It's goal is to be used by the representative to help them to take decision about the digital inclusion on there territory.
-				<p>
-					<p>The digital fragility represent many things:<br>
-						- There's more and more procedures that must be made online nowaday and less people to interact with<br>
+				Its goal is to be used by the representative to help them to take decision about the digital inclusion on there territory.
+					<h3>Why is the index of fragility important?</h3>
+					<p>
+						- There is more and more procedures that must be made online nowaday and less people to interact with<br>
 						- Some people (in particular our elders, but not only) have troubles with new technologies and need some help using computers.<br>
 						- Some people can't afford for this technologies and can't make the procedures as they would.<br>
 						- Some people, due to the fact a website is a robot and can't interact as a human, are not aware of the procedure they have to or can do.<br>
@@ -45,17 +42,16 @@
 						- Numerical competences: Identify territories where people have issues using new technologies<br>
 						- Paperwork competences: Identify territories where people have issues with paperwork (for example, young people unexperienced, or non native speaker)<br>
 					</p>
-					<p>
-					</p>
 				</section>
-				<section id="secondary_section">
-					<h2>Enter your postal code:</h2>
-					<p>If you do not know your postal code you can find it <a href="https://www.code-postal.com/">clicking here.</a></p>
+				<!-- Section where the user can use the tool -->
+				<section id="secondary_section" align = "justify">
+					<h2>Do you want to know the Index of Fragility in your area?</h2>
+					<p> You just need your Postal Code, if you do not know it you can find it by <a href="https://www.code-postal.com/" target="popup">clicking here.</a></p>
 					<form method="post">
-						Postal Code: <input type="number" name="area_name"><br>
+						Enter your Postal Code here: <input type="number" name="area_name"><br>
 						<button type="submit" name="submit">Submit</button>
 					</form>
-
+					<!-- PHP code handling the formulaire and looking into the preprocessed database with the results -->
 					<?php
 					$conn = new PDO("mysql:host=localhost;dbname=trial", "fatima", "admin");
 					if(isset($_POST['submit']))
@@ -71,6 +67,7 @@
 						$db = mysqli_connect("localhost","fatima","admin","trial");
 		                $records = mysqli_query($db, "SELECT COM,name_commune,global_score,dpt_score,region_score,index1,index2,index3,index4,dept_name,region_name,dept_number From data_13k where COM=$area_name");  // Use select query here
 		                $data = mysqli_fetch_array($records);
+		                // Presentation of results
 		                echo "
 		                <div id='customers'>
 		                <table  >
@@ -97,7 +94,8 @@
 		                <th>" . $data['index4'] . "</th>
 		                </tr>
 		                </table>
-		                <h3> Conclusion </h3>
+                        <!-- Conclusion of the results -->
+		                <h2> Conclusion </h2>
 		                <p> These results represent all variables of the commune researched, it shows that:</p>
 		                <ul>
 		                <li>The digital fragility index of " . $data['name_commune'] . " " . $data['COM'] . " is  " . $data['global_score'] . ". </li>
@@ -132,18 +130,21 @@
 		                }
 		            }
 		            ?>
-					<p align = "center"> Reminder, you must corroborate those values with local and on the fields enquery. <br>
+					<p align = "justify"> Reminder, you must corroborate those values with local and on the fields enquery. <br>
 						Moreover and most importantly, those values aren't exact. They are calculated out of databases that might not be up to date, or totally complete for different reason such has, there was no enquery in those location yet or municipalities havn't sent, for some privacy reason, their values.<br>
 						Other statistics should be taken into account but aren't available at this level, for example the rate of illetrism or the frequency of internet usage that jst can't be known by municipalities.<br>
 						In addition, comparison between small comunalities, especially those situated in province, should be avoided, their population isn't big enough so some services aren't available.<br>
 					</p>
+					<!-- Button to generate PDF with results and conclusion -->
 		            <button onclick="javascript:demoFromHTML();">PDF of Results</button>
 		        </form>
 		    </section>
+		    <!-- Footer of the website -->
 		    <footer>
 		    	<p align="center">Copyright (c) 2020</p>
 		    </footer>
 		</div>
+		<!-- Javascript Libraries  -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> 
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.1.1/jspdf.umd.min.js"></script>
 		<script src="jspdf.debug.js"></script>

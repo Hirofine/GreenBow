@@ -10,6 +10,7 @@ function demoFromHTML() {
       return true
     }
   };
+  //margins for the PDF file
   margins = {
     top: 80,
     bottom: 60,
