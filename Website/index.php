@@ -90,7 +90,7 @@
 		        echo "
 				<div id='customers'>
 				
-				<table  >
+				<table>
 		    <tr>
 				<th > <p  id='bypassme'>Postal code</p></th>
 				<th ><p >Commune name</p></th>
@@ -114,6 +114,7 @@
 				<th>" . $data['index4'] . "</th>
 		    </tr>
 			</table>
+			<h3> Conclusion </h3>
 	<table>
 		<tr>
 			<th>The digital fragility index for " . $data['name_commune'] . " (" . $data['COM'] . ") is  " . $data['global_score'] . ".</th>
