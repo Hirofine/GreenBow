@@ -45,7 +45,7 @@
 					<h2>Section 2</h2>
 					<form action="index.php" method="post">
 					Postal Code: <input type="number" name="area_name"><br>
-					<input type="submit">
+					<button type="submit" name="submit">Submit</button>
 					</form>
 
 
