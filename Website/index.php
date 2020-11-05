@@ -115,6 +115,7 @@
 		    </tr>
 			</table>
 			<h3> Conclusion </h3>
+			<p>
 	<table>
 		<tr>
 			<th>The digital fragility index for " . $data['name_commune'] . " (" . $data['COM'] . ") is  " . $data['global_score'] . ".</th>
@@ -182,10 +183,11 @@
 					<tr> 
 						<th>Your departement seems to be in late compare to your region in the digital transition, try to work at higher level than the municipality one to get a global line of conducts to pursue the transition </th>
 					</tr>
-				</table>';
+				</table></p>';
 		}
 	}
 		}
+		
 
 		        
         
