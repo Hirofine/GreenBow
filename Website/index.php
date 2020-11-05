@@ -45,26 +45,15 @@
 				</section>
 				<section id="secondary_section">
 					<h2>Section 2</h2>
-					<form method = "post">
-						<label> Area </label>
-						<select name ="area_name">
-						    <option disabled selected>---Area---</option>
-						    <?php
-						        $db = mysqli_connect("localhost","fatima","admin","trial");
-						        $records = mysqli_query($db, "SELECT COM From data_13k");  
-						        while($data = mysqli_fetch_array($records))
-						        {
-						            echo "<option value='". $data['COM'] ."'>" .$data['COM'] ."</option>";  // displaying data in option menu
-						             echo "<p> ID </p>";  // displaying data 
-						        }   
-						    ?>  
-						</select>
-						<button type="submit" name="submit">Submit</button>
+					<form action="welcome.php" method="post">
+					Postal Code: <input type="text" name="postal_code"><br>
+					<input type="submit">
+					</form>
 
-						</form>
-				        <form id="form2">
-					    <div id="dvContainer">
 		<?php
+		
+
+        
 		// Turn off all error reporting
 		//error_reporting(0);
 
@@ -73,7 +62,8 @@
 		if(isset($_POST['submit']))
 		{
 
-		    $area_name = $_POST['area_name'];
+		    $area_name = $_POST['postal_code'];
+		    //$area_name = $_POST['area_name'];
 		    $sql= $conn-> prepare("Insert into tblarea (area_name)
 		    values (:area_name)");
 		    $conn->beginTransaction();
