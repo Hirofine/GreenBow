@@ -85,16 +85,15 @@
 		    $data = mysqli_fetch_array($records);
 		        
 
-		        echo 
-				"<table>
+		        echo "<table>
 						<tr>
-							<th>"The digital fragility index for $data['name of comune'] ($data['COM']) is  $data['global score']."</th>
+							<th>The digital fragility index for "$data['name of comune']" ("$data['COM']") is  "$data['global score']".</th>
 						</tr>
 						<tr>
-							<th>"The one for $data['department name'] ($data['departement number']) is $data['dpt score']."</th>
+							<th>The one for "$data['department name']" ("$data['departement number']") is "$data['dpt score']".</th>
 						</tr>
 						<tr>
-							<th>" The one for $data['region name'] is $data['region score']."</th>
+							<th>The one for "$data['region name']" is "$data['region score']".</th>
 						</tr>
 						</table>";
 		}
