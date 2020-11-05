@@ -7,6 +7,20 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Index of Fragility</title>
 		<link rel="stylesheet" type="text/css" href="styles.css">
+
+		 <style>
+	th { width : 200px; 
+	  position : center;
+	  border: 1px solid ;
+	}
+	  tr {
+	}
+	table
+{
+    border-collapse: collapse;
+}
+	
+  </style>
 	</head>
 	<body>
 		<div id="content">
