@@ -128,65 +128,32 @@
 		</tr>
 	</table>";
 	if($data['global_score'] < 0.5 * $data['dept_score']){	
-		echo '<table>
-			<tr> 
-				<th> Your municipality is well suited, and your population tend to have quite a good access to the information compared to your departement.</th>
-			</tr>
-			</table>';
+		echo '<p> Your municipality is well suited, and your population tend to have quite a good access to the information compared to your departement.</p>';
 	}else{ 
 		if( $data['global_score'] < 0.9 * $data['dept_score']){
-			echo '<table>
-				<tr> 
-					<th>Compared to your department, your municipality is quite good, but there is still room for improvment.  </th>
-				</tr>
-				</table>';
+			echo '<p>Compared to your department, your municipality is quite good, but there is still room for improvment.</p>';
 		}else{ 
 			if($data['global_score'] < 1.1 * $data['dept_score']){
-				echo '<table>
-					<tr> 
-						<th>Your municipality have about the same result s your department, maybe you should do some investment to be one of the leader of the digital transition in your department and get your citizens a better life  </th>
-					</tr>
-				</table>';
+				echo '<p>Your municipality have about the same result s your department, maybe you should do some investment to be one of the leader of the digital transition in your department and get your citizens a better life </p>';
 			}else{  
 				if( $data['global_score'] < 1.5 * $data['dept_score']){
-					echo '<table>
-						<tr> 
-							<th>Your municipality seems to be late for the digital transition in your department, you should take action so your citizens won\'t be in trouble in the near futur </th>
-						</tr>
-					</table>';
+					echo '<p>Your municipality seems to be late for the digital transition in your department, you should take action so your citizens won\'t be in trouble in the near futur </p>';
 				}else{
-					echo '<table>
-						<tr> 
-							<th>Your municipality is late in the digital transition compare to your department, you must take decision otherwise your citizens might become unable to adapt and overwhelmed by this transition soon. </th>
-						</tr>
-					</table>';
+					echo '<p>Your municipality is late in the digital transition compare to your department, you must take decision otherwise your citizens might become unable to adapt and overwhelmed by this transition soon.</p>';
 				}
 			}
 		}
 	}
 	
 	if($data['dept_score'] < 0.9 * $data['region_score']){
-		echo '<table>
-					<tr> 
-						<th>Your departement seems to be one of the leader of your region when it is about the digital transition, this is good. </th>
-					</tr>
-				</table>';
+		echo '<p>Your departement seems to be one of the leader of your region when it is about the digital transition, this is good.</p>';
 	}else{
 		if($data['dept_score'] < 1.1 * $data['region_score']){
-			echo '<table>
-						<tr> 
-							<th>Your departement is in the mean of your region in the digital transition, try to improve the decisions to get your municipalityand departement to be one of the leader of the transtion </th>
-						</tr>
-					</table>';
+			echo '<p>Your departement is in the mean of your region in the digital transition, try to improve the decisions to get your municipalityand departement to be one of the leader of the transtion </p>';
 		}else{
-			echo '<table>
-					<tr> 
-						<th>Your departement seems to be in late compare to your region in the digital transition, try to work at higher level than the municipality one to get a global line of conducts to pursue the transition </th>
-					</tr>
-				</table></p>';
+			echo '<p>Your departement seems to be in late compare to your region in the digital transition, try to work at higher level than the municipality one to get a global line of conducts to pursue the transition</p>';
 		}
 	}
-		}
 		
 
 		        
