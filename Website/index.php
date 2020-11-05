@@ -1,3 +1,5 @@
+
+
 <html>
 	<head>
 		<meta charset="utf-8">
@@ -58,9 +60,10 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.1.1/jspdf.umd.min.js"></script>
 		<script src="jspdf.debug.js"></script>
 		<script src="script.js"></script>
+
 		<?php
 		// Turn off all error reporting
-		error_reporting(0);
+		//error_reporting(0);
 
 
 		$conn = new PDO("mysql:host=localhost;dbname=trial", "fatima", "admin");
@@ -74,25 +77,23 @@
 		    $sql->execute(array(':area_name'=>$area_name));
 			file_put_contents('filename.txt', $area_name); 
 		    $conn->commit();
-		}
-
-		        $db = mysqli_connect("localhost","fatima","admin","trial");
-		        $records = mysqli_query($db, "SELECT COM,global score, dpt score From data_13k where COM=$area_name");  // Use select query here
-				$data = mysqli_fetch_array($records);
+		    $db = mysqli_connect("localhost","fatima","admin","trial");
+		    $records = mysqli_query($db, "SELECT COM From data_13k where COM=$area_name");  // Use select query here
+		    $data = mysqli_fetch_array($records);
 		        
 
 		        echo "<table>
 		    <tr>
-		    <th>ID</th>
 		    <th>Commune</th>
-		    <th>Index1</th>
-		    <th>Index2</th>
 		    </tr>
-		    <tr><th>" . $data['Id'] . "</th>
-		        <th>" . $data['COM'] . "</th>
-		        <th>" . $data['global score'] . "</th>
-		        <th>" . $data['dpt score'] . "</th></tr></table>";
+		    <tr><th>" . $data['COM'] . "</th>
+		    </tr></table>";
+		}
+
+		        
         
-    	?> 
+ ?> 
+
+		
 	</body>
 </html>
