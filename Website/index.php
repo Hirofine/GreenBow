@@ -43,7 +43,7 @@
 				</section>
 				<section id="secondary_section">
 					<h2>Section 2</h2>
-					<form action="index.php" method="post">
+					<form method="post">
 					Postal Code: <input type="number" name="area_name"><br>
 					<button type="submit" name="submit">Submit</button>
 					</form>
@@ -71,15 +71,40 @@
 			file_put_contents('filename.txt', $area_name); 
 		    $conn->commit();
 		    $db = mysqli_connect("localhost","fatima","admin","trial");
-		    $records = mysqli_query($db, "SELECT COM,name_commune,global_score From data_13k where COM=$area_name");  // Use select query here
+		    $records = mysqli_query($db, "SELECT COM,name_commune,global_score,dpt_score,region_score,index1,index2,index3,index4 From data_13k where COM=$area_name");  // Use select query here
 		    $data = mysqli_fetch_array($records);
-		        
-
-		        echo "<table>
-						<tr>
-							<th>The digital fragility index for " . $data['name_commune'] . " (" . $data['COM'] . ") is  " . $data['global_score'] . ".</th>
-						</tr>
-						</table>";
+		        echo "
+				<div id='customers'>
+				
+				<table  >
+		    <tr>
+				<th > <p  id='bypassme'>Postal code</p></th>
+				<th ><p >Commune name</p></th>
+				<th >Global score</th>
+				<th>dept score</th>
+				<th>region score</th>
+				<th>index1</th>
+				<th>index2</th>
+				<th>index3</th>
+				<th>index4</th>
+		    </tr>
+		    <tr>
+				<th>" . $data['COM'] . "</th>
+				<th>" . $data['name_commune'] . "</th>
+				<th>" . $data['global_score'] . "</th>
+				<th>" . $data['dpt_score'] . "</th>
+				<th>" . $data['region_score'] . "</th>
+				<th>" . $data['index1'] . "</th>
+				<th>" . $data['index2'] . "</th>
+				<th>" . $data['index3'] . "</th>
+				<th>" . $data['index4'] . "</th>
+		    </tr>
+			</table>
+			
+			<h3> Conclusion </h3>
+			<p> These results represent all variables of the commune researched, it shows that...</p>
+			</div>
+			";
 		}
 
 		        
@@ -87,7 +112,7 @@
  ?> 
 
 					    </div>
-					    <input type="button" value="Print Div Contents" id="btnPrint" />
+					    <button onclick="javascript:demoFromHTML();">PDF of Results</button>
 					    </form>
 				</section>
 				
