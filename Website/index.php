@@ -66,6 +66,9 @@
 						$db = mysqli_connect("localhost","fatima","admin","trial");
 		                $records = mysqli_query($db, "SELECT COM,name_commune,global_score,dpt_score,region_score,index1,index2,index3,index4,dept_name,region_name,dept_number From data_13k where COM=$area_name");  // Use select query here
 		                $data = mysqli_fetch_array($records);
+		                if ($data == Null){
+		                	echo "Your Post Code was not found, please enter a valid one."
+		                }
 		                // Presentation of results
 		                echo "
 		                <div id='customers'>
@@ -102,37 +105,37 @@
 		                <li>And for its region called " . $data['region_name'] . " is " . $data['region_score'] . ". </li> </ul>
 		                </div>";
   		                if($data['global_score'] < 0.5 * $data['dpt_score']){	
-		                	echo '<p> Your municipality is well suited, and your population tend to have quite a good access to the information compared to your departement.</p>';
+		                	echo '<p> Your municipality is in a good position, and your population tends to have better access to the information compared to your departement.</p>';
 		                }else{ 
 		                	if( $data['global_score'] < 0.9 * $data['dpt_score']){
-		                		echo '<p>Compared to your department, your municipality is quite good, but there is still room for improvment.</p>';
+		                		echo '<p>Compared to your department, your municipality is quite good, but there is still room for improvement.</p>';
 		                	}else{ 
 		                		if($data['global_score'] < 1.1 * $data['dpt_score']){
-		                			echo '<p>Your municipality have about the same result s your department, maybe you should do some investment to be one of the leader of the digital transition in your department and get your citizens a better life </p>';
+		                			echo '<p>Your municipality has about the same result as your department, maybe you should do some investments to be one of the leaders of the digital transition in your department and get your citizens a better life </p>';
 		                		}else{  
 		                			if( $data['global_score'] < 1.5 * $data['dpt_score']){
 		                				echo '<p>Your municipality seems to be late for the digital transition in your department, you should take action so your citizens won\'t be in trouble in the near futur </p>';
 		                			}else{
-		                				echo '<p>Your municipality is late in the digital transition compare to your department, you must take decision otherwise your citizens might become unable to adapt and overwhelmed by this transition soon.</p>';
+		                				echo '<p>Your municipality is behind in the digital transition compared to your department, you must take wise decisions, otherwise your citizens might become unable to adapt and overwhelmed by this transition soon.</p>';
 		                			}
 		                		}
 		                	}
 		                }
 		                if($data['dpt_score'] < 0.9 * $data['region_score']){
-		                	echo '<p>Your departement seems to be one of the leader of your region when it is about the digital transition, this is good.</p>';
+		                	echo '<p>Your departement seems to be one of the leaders of your region when it comes to the digital transition, this is good.</p>';
 		                }else{
 		                	if($data['dpt_score'] < 1.1 * $data['region_score']){
-		                		echo '<p>Your departement is in the mean of your region in the digital transition, try to improve the decisions to get your municipalityand departement to be one of the leader of the transtion </p>';
+		                		echo '<p>Your departement is in the mean of your region in the digital transition, try to improve the decisions to get your municipality and departement to be one of the leaders of the digital transition </p>';
 		                	}else{
-		                		echo '<p>Your departement seems to be in late compare to your region in the digital transition, try to work at higher level than the municipality one to get a global line of conducts to pursue the transition</p>';
+		                		echo '<p>Your departement seems to be behind compared to your region in the digital transition, try to work at a higher level than the municipality to get a global line of conducts to pursue the transition</p>';
 		                	}
 		                }
 		            }
 		            ?>
 					<p align = "justify"> Reminder, you must corroborate those values with local and on the fields enquery. <br>
-						Moreover and most importantly, those values aren't exact. They are calculated out of databases that might not be up to date, or totally complete for different reason such has, there was no enquery in those location yet or municipalities havn't sent, for some privacy reason, their values.<br>
-						Other statistics should be taken into account but aren't available at this level, for example the rate of illetrism or the frequency of internet usage that jst can't be known by municipalities.<br>
-						In addition, comparison between small comunalities, especially those situated in province, should be avoided, their population isn't big enough so some services aren't available.<br>
+						Moreover and most importantly, those values aren't exact. They are calculated out of databases that might not be up to date, or totally incomplete for different reasons such as absence of enquery in those locations, information not sent by municipalities or privacy reasons.<br>
+						Other statistics should be taken into account but aren't available at this level; for example the rate of illetrism or the frequency of internet usage that can't be known by municipalities.<br>
+						In addition, comparison between small communities, especially those situated in province should be avoided since their population isn't big enough and therefore some services aren't available.<br>
 					</p>
 					<!-- Button to generate PDF with results and conclusion -->
 		            <button onclick="javascript:demoFromHTML();">PDF of Results</button>
