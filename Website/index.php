@@ -90,7 +90,7 @@
 							<th>The digital fragility index for " . $data['name_of_commune'] . " (" . $data['COM'] . ") is  " . $data['global score'] . ".</th>
 						</tr>
 						<tr>
-							<th>The one for " ; $data['dept_name'] . " (" . $data['dept_number'] ; ") is " ; $data['dpt_score'] . ".</th>
+							<th>The one for " . $data['dept_name'] . " (" . $data['dept_number'] . ") is " . $data['dpt_score'] . ".</th>
 						</tr>
 						<tr>
 							<th>The one for " . $data['region_name'] . " is " . $data['region_score'] . ".</th>
