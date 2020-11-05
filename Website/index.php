@@ -56,7 +56,7 @@
 					</p>
 				</section>
 				<section id="secondary_section">
-					<h2>Section 2</h2>
+					<h2>Enter your postal code</h2>
 					<form method="post">
 					Postal Code: <input type="number" name="area_name"><br>
 					<button type="submit" name="submit">Submit</button>
@@ -87,6 +87,7 @@
 		    $db = mysqli_connect("localhost","fatima","admin","trial");
 		    $records = mysqli_query($db, "SELECT COM,name_commune,global_score,dpt_score,region_score,index1,index2,index3,index4 From data_13k where COM=$area_name");  // Use select query here
 		    $data = mysqli_fetch_array($records);
+
 		        echo "
 				<div id='customers'>
 				
@@ -115,10 +116,26 @@
 		    </tr>
 			</table>
 			<h3> Conclusion </h3>
+<<<<<<< Updated upstream
 			<p>The digital fragility index for " . $data['name_commune'] . " (" . $data['COM'] . ") is  " . $data['global_score'] . ".</p>
 		<p>The one for " . $data['dept_name'] . " (" . $data['dept_number'] . ") is " . $data['dept_score'] . ".</p>
 		<p>The one for " . $data['region_name'] . " is " . $data['region_score'] . ".<p>";
 		
+=======
+			<p>
+			</div>
+	<table>
+		<tr>
+			<th>The digital fragility index for " . $data['name_commune'] . " (" . $data['COM'] . ") is  " . $data['global_score'] . ".</th>
+		</tr>
+		<tr>
+			<th>The one for " . $data['dept_name'] . " (" . $data['dept_number'] . ") is " . $data['dept_score'] . ".</th>
+		</tr>
+		<tr>
+			<th>The one for " . $data['region_name'] . " is " . $data['region_score'] . ".</th>
+		</tr>
+	</table>";
+>>>>>>> Stashed changes
 	if($data['global_score'] < 0.5 * $data['dept_score']){	
 		echo '<p> Your municipality is well suited, and your population tend to have quite a good access to the information compared to your departement.</p>';
 	}else{ 
@@ -152,7 +169,7 @@
         
  ?> 
 
-					    </div>
+					    
 					    <button onclick="javascript:demoFromHTML();">PDF of Results</button>
 					    </form>
 				</section>
