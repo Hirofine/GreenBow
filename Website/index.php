@@ -17,7 +17,7 @@
 					<small>Design4Green</small>
 				</header>
 				<section id="main_section">
-					<h2>Section 1</h2>
+					<h2>What is the index of Fragility? and What does it mean?</h2>
 					<p>The digital fragility index is a tool made by the SGAR Occitanie with the ANSA and Mednum during the IncubO.\n
 					It's goal is to be used by the representative to help them to take decision about the digital inclusion on there territory.
 					<p>
@@ -32,7 +32,13 @@
 
 					<p>This tool compile all these things with some index, so the representatives can use it to help taking some decisions and spend public money the wiser\n
 					This index show the probability for a given zone, that a significative part of the population is in situation of digital exclusion, this mean they are not able to use it properly.\n
-					This can be due to many different reasons. Those reason can be evaluated thanks to the 4 other index we are sharing.</p>
+					This can be due to many different reasons. Those reason can be evaluated thanks to the 4 other index we are sharing.\n
+					- Access to digital interfaces : Identify poorly deserved territories by network, or where populations would have financial troubles to access\n
+					- Access to the information : Identify territories where people would have issue accessing the information or troubles understanding it\n
+					- Numerical competences: Identify territories where people have issues using new technologies\n
+					- Paperwork competences: Identify territories where people have issues with paperwork (for example, young people unexperienced, or non native speaker)\n
+
+					</p>
 				</section>
 				<section id="secondary_section">
 					<h2>Section 2</h2>
